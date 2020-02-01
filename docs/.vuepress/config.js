@@ -1,9 +1,9 @@
 module.exports = {
 	title: "Giao UI",
-	base: "/giaoui/",
-	lastUpdated: 'Last Updated',
+	base: "/giaoui-vue-source/",
+	lastUpdated: "Last Updated",
 	description: "用Vue造轮子",
-	plugins: ['@vuepress/last-updated','@vuepress/back-to-top','@vuepress/nprogress'],
+	plugins: ["@vuepress/last-updated", "@vuepress/back-to-top", "@vuepress/nprogress"],
 	themeConfig: {
 		logo: "/giao.jpg",
 		smoothScroll: true,
