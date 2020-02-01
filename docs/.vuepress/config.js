@@ -24,6 +24,7 @@ module.exports = {
 				children: [
 					"/component/1.md",
 					"/component/2.md",
+					"/component/3.md",
 				]
 			}
 		]

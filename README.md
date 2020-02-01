@@ -15,7 +15,7 @@ yarn docs:dev
 yarn docs:build
 ```
 
-##生成文档并部署
+## 生成文档并部署
 ```shell script
 yarn d
 ```
