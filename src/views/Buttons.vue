@@ -8,6 +8,14 @@
       <Button type="warning">警告按钮</Button>
       <Button type="danger">危险按钮</Button>
     </div>
+    <div class="plainButton">
+      <Button plain>朴素按钮</Button>
+      <Button plain type="primary">主要按钮</Button>
+      <Button plain type="success">成功按钮</Button>
+      <Button plain type="info">信息按钮</Button>
+      <Button plain type="warning">警告按钮</Button>
+      <Button plain type="danger">危险按钮</Button>
+    </div>
   </div>
 </template>
 
@@ -16,7 +24,8 @@
 
 	export default {
 		name: "Buttons",
-		components: {Button}
+		components: {Button},
+
 	}
 </script>
 
@@ -24,5 +33,9 @@
   .container {
     display: flex;
     flex-direction: column;
+  }
+
+  .plainButton {
+    padding-top: 10px;
   }
 </style>

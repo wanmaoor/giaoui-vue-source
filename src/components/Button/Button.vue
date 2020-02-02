@@ -19,6 +19,9 @@
 			}
 		},
 		mounted() {
+			if (this.$attrs.hasOwnProperty("plain")) {
+				this.buttonStyle.push("plain")
+			}
 			if (this.type) {
 				this.buttonStyle.push(this.type)
 			} else {
@@ -121,6 +124,26 @@
   .danger:focus, .danger:hover {
     background: #f78989;
     border-color: #f78989;
+    color: #fff;
+  }
+
+  /*  PLAIN STYLE*/
+  .plain:focus, .plain:hover {
+    background: #fff;
+    border-color: #409eff;
+    color: #409eff;
+  }
+
+  /*  PLAIN PRIMARY STYLE*/
+  .primary.plain {
+    color: #409eff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+  }
+
+  .primary.plain:focus, .primary.plain:hover {
+    background: #409eff;
+    border-color: #409eff;
     color: #fff;
   }
 </style>
