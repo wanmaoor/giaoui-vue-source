@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div @click="handleClick" class="buttonGroup">
-      <Button>默认按钮</Button>
+    <div class="buttonGroup">
+      <Button @click="handleClick">默认按钮</Button>
       <Button type="primary">主要按钮</Button>
       <Button type="success">成功按钮</Button>
       <Button type="info">信息按钮</Button>
@@ -17,6 +17,14 @@
       <Button plain type="danger">危险按钮</Button>
     </div>
     <div class="buttonGroup">
+      <Button @click="handleClick" disabled>禁用按钮</Button>
+      <Button disabled type="primary">主要按钮</Button>
+      <Button disabled type="success">成功按钮</Button>
+      <Button disabled type="info">信息按钮</Button>
+      <Button disabled type="warning">警告按钮</Button>
+      <Button disabled type="danger">危险按钮</Button>
+    </div>
+    <div class="buttonGroup">
       <Button round>圆角按钮</Button>
       <Button round type="primary">主要按钮</Button>
       <Button round type="success">成功按钮</Button>
@@ -24,6 +32,7 @@
       <Button round type="warning">警告按钮</Button>
       <Button round type="danger">危险按钮</Button>
     </div>
+
   </div>
 </template>
 

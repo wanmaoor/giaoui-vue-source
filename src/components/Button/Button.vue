@@ -1,7 +1,11 @@
 <!--suppress CssUnusedSymbol -->
 <template>
-  <button :class="buttonStyle">
-    <slot>{{"加载失败"}}</slot>
+  <button
+    :class="buttonStyle"
+    :disabled="isDisabled"
+    @click="$emit('click')"
+  >
+    <slot>{{"无按钮文字"}}</slot>
   </button>
 </template>
 
@@ -16,12 +20,17 @@
 		},
 		data() {
 			return {
-				buttonStyle: ["button"]
+				buttonStyle: ["button"],
+				isDisabled: false
 			}
 		},
 		mounted() {
 			this.addButtonFeature("plain")
 			this.addButtonFeature("round")
+			if (this.$attrs.hasOwnProperty("disabled")) {
+				this.buttonStyle.push("disabled")
+				this.isDisabled = true
+			}
 			if (this.type) {
 				this.buttonStyle.push(this.type)
 			} else {
@@ -210,5 +219,14 @@
   .round {
     border-radius: 20px;
     padding: 12px 23px;
+  }
+
+  /*  DISABLE BUTTON*/
+  .button.disabled, .button.disabled:focus, .button.disabled:hover {
+    color: #c0c4cc;
+    cursor: not-allowed;
+    background-image: none;
+    background-color: #fff;
+    border-color: #ebeef5;
   }
 </style>
