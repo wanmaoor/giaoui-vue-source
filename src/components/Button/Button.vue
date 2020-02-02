@@ -1,3 +1,4 @@
+<!--suppress CssUnusedSymbol -->
 <template>
   <button :class="buttonStyle">
     <slot>{{"加载失败"}}</slot>
@@ -144,6 +145,19 @@
   .primary.plain:focus, .primary.plain:hover {
     background: #409eff;
     border-color: #409eff;
+    color: #fff;
+  }
+
+  /*  PLAIN SUCCESS STYLE*/
+  .success.plain {
+    color: #67c23a;
+    background: #f0f9eb;
+    border-color: #c2e7b0;
+  }
+
+  .success.plain:focus, .success.plain:hover {
+    background: #67c23a;
+    border-color: #67c23a;
     color: #fff;
   }
 </style>
