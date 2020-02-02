@@ -8,7 +8,10 @@
 	export default {
 		name: "Button",
 		props: {
-			type: String,
+			type: {
+				type: String,
+				default: "default"
+			}
 		},
 		data() {
 			return {
@@ -16,26 +19,10 @@
 			}
 		},
 		mounted() {
-			switch (this.type) {
-				case "primary":
-					this.buttonStyle.push("primary")
-					break
-				case "success":
-					this.buttonStyle.push("success")
-					break
-				case "info":
-					this.buttonStyle.push("info")
-					break
-				case "warning":
-					this.buttonStyle.push("warning")
-					break
-				case "danger":
-					this.buttonStyle.push("danger")
-					break
-				case undefined:
-					break
-				default:
-					console.error("invalid type input")
+			if (this.type) {
+				this.buttonStyle.push(this.type)
+			} else {
+				console.error("invalid type prop input")
 			}
 		}
 	}
