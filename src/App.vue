@@ -6,6 +6,8 @@
       <router-link to="/tabs">Tabs</router-link>
       |
       <router-link to="/collapses">Collapses</router-link>
+      |
+      <router-link to="/buttons">Buttons</router-link>
     </div>
     <router-view/>
   </div>
