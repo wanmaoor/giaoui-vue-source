@@ -20,13 +20,19 @@
 			}
 		},
 		mounted() {
-			if (this.$attrs.hasOwnProperty("plain")) {
-				this.buttonStyle.push("plain")
-			}
+			this.addButtonFeature("plain")
+			this.addButtonFeature("round")
 			if (this.type) {
 				this.buttonStyle.push(this.type)
 			} else {
 				console.error("invalid type prop input")
+			}
+		},
+		methods: {
+			addButtonFeature(style) {
+				if (this.$attrs.hasOwnProperty(style)) {
+					this.buttonStyle.push(style)
+				}
 			}
 		}
 	}
@@ -174,7 +180,7 @@
     color: #fff;
   }
 
-  /*  PALIN WARNING STYLE*/
+  /*  PLAIN WARNING STYLE*/
   .warning.plain {
     color: #e6a23c;
     background: #fdf6ec;
@@ -198,5 +204,11 @@
     background: #f56c6c;
     border-color: #f56c6c;
     color: #fff;
+  }
+
+  /*  ROUND */
+  .round {
+    border-radius: 20px;
+    padding: 12px 23px;
   }
 </style>

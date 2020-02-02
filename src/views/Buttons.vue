@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="solidButton">
+    <div @click="handleClick" class="buttonGroup">
       <Button>默认按钮</Button>
       <Button type="primary">主要按钮</Button>
       <Button type="success">成功按钮</Button>
@@ -8,13 +8,21 @@
       <Button type="warning">警告按钮</Button>
       <Button type="danger">危险按钮</Button>
     </div>
-    <div class="plainButton">
+    <div class="buttonGroup">
       <Button plain>朴素按钮</Button>
       <Button plain type="primary">主要按钮</Button>
       <Button plain type="success">成功按钮</Button>
       <Button plain type="info">信息按钮</Button>
       <Button plain type="warning">警告按钮</Button>
       <Button plain type="danger">危险按钮</Button>
+    </div>
+    <div class="buttonGroup">
+      <Button round>圆角按钮</Button>
+      <Button round type="primary">主要按钮</Button>
+      <Button round type="success">成功按钮</Button>
+      <Button round type="info">信息按钮</Button>
+      <Button round type="warning">警告按钮</Button>
+      <Button round type="danger">危险按钮</Button>
     </div>
   </div>
 </template>
@@ -25,7 +33,11 @@
 	export default {
 		name: "Buttons",
 		components: {Button},
-
+		methods: {
+			handleClick() {
+				console.log("hi")
+			}
+		}
 	}
 </script>
 
@@ -35,7 +47,7 @@
     flex-direction: column;
   }
 
-  .plainButton {
+  .buttonGroup {
     padding-top: 10px;
   }
 </style>
