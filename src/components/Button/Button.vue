@@ -125,4 +125,15 @@
   }
 
   /*  DANGER STYLE*/
+  .danger {
+    color: #fff;
+    background-color: #f56c6c;
+    border-color: #f56c6c;
+  }
+
+  .danger:focus, .danger:hover {
+    background: #f78989;
+    border-color: #f78989;
+    color: #fff;
+  }
 </style>
