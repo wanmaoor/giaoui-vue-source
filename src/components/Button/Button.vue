@@ -112,5 +112,17 @@
   }
 
   /*  WARNING STYLE*/
+  .warning {
+    color: #fff;
+    background-color: #e6a23c;
+    border-color: #e6a23c;
+  }
+
+  .warning:focus, .warning:hover {
+    background: #ebb563;
+    border-color: #ebb563;
+    color: #fff;
+  }
+
   /*  DANGER STYLE*/
 </style>
