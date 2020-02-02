@@ -175,5 +175,28 @@
   }
 
   /*  PALIN WARNING STYLE*/
+  .warning.plain {
+    color: #e6a23c;
+    background: #fdf6ec;
+    border-color: #f5dab1;
+  }
+
+  .warning.plain:focus, .warning.plain:hover {
+    background: #e6a23c;
+    border-color: #e6a23c;
+    color: #fff;
+  }
+
   /*  PLAIN DANGER STYLE*/
+  .danger.plain {
+    color: #f56c6c;
+    background: #fef0f0;
+    border-color: #fbc4c4;
+  }
+
+  .danger.plain:focus, .danger.plain:hover {
+    background: #f56c6c;
+    border-color: #f56c6c;
+    color: #fff;
+  }
 </style>
