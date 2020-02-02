@@ -160,4 +160,20 @@
     border-color: #67c23a;
     color: #fff;
   }
+
+  /*  PLAIN INFO STYLE*/
+  .info.plain {
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6;
+  }
+
+  .info.plain:focus, .info.plain:hover {
+    background: #909399;
+    border-color: #909399;
+    color: #fff;
+  }
+
+  /*  PALIN WARNING STYLE*/
+  /*  PLAIN DANGER STYLE*/
 </style>
