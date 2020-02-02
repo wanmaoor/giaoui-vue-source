@@ -99,6 +99,17 @@
   }
 
   /*  INFO STYLE */
+  .info {
+    color: #fff;
+    background-color: #909399;
+    border-color: #909399;
+  }
+
+  .info:focus, .info:hover {
+    background: #a6a9ad;
+    border-color: #a6a9ad;
+    color: #fff;
+  }
 
   /*  WARNING STYLE*/
   /*  DANGER STYLE*/
