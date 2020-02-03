@@ -9,7 +9,10 @@
 
 <script>
 	import Button from "../components/Button/Button"
+	import message from "../message"
+	import Vue from "vue"
 
+	Vue.use(message)
 	export default {
 		name: "Messages",
 		components: {Button},
@@ -18,7 +21,6 @@
 				this.$message({
 					text: "成功消息"
 				})
-				console.log(this.$vnode)
 			},
 			open2() {
 				this.$message({
