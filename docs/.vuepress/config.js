@@ -1,8 +1,8 @@
 module.exports = {
 	title: "Giao UI",
+	description: "用Vue造轮子",
 	base: "/giaoui-vue-source/",
 	lastUpdated: "Last Updated",
-	description: "用Vue造轮子",
 	plugins: ["@vuepress/last-updated", "@vuepress/back-to-top", "@vuepress/nprogress"],
 	themeConfig: {
 		logo: "/giao.jpg",
@@ -25,6 +25,7 @@ module.exports = {
 					"/component/1.md",
 					"/component/2.md",
 					"/component/3.md",
+					"/component/4.md",
 				]
 			}
 		]

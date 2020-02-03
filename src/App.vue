@@ -8,6 +8,8 @@
       <router-link to="/collapses">Collapses</router-link>
       |
       <router-link to="/buttons">Buttons</router-link>
+      |
+      <router-link to="/messages">Messages</router-link>
     </div>
     <router-view/>
   </div>
