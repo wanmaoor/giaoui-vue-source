@@ -3,12 +3,10 @@ import Message from "./components/Message/Message"
 export default {
   install(Vue) {
     Vue.prototype.$message = ({type = "success", text = ""}) => {
-      console.log(type, text)
       createMessage(Vue, {type, text})
     }
   }
 }
-
 
 function createMessage(Vue, propsData) {
   const Constructor = Vue.extend(Message)

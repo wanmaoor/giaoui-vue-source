@@ -18,12 +18,26 @@
 		},
 		data() {
 			return {
-				messageStyle: ["message", "show"]
+				messageStyle: ["message"]
 			}
 		},
 		mounted() {
 			if (this.type) {
 				this.messageStyle.push(this.type)
+			}
+			setTimeout(() => {this.messageStyle.push("show")}, 0)
+			setTimeout(() => {
+				this.close()
+			}, 3000)
+		},
+		methods: {
+			close() {
+				const index = this.messageStyle.findIndex((item) => item === "show")
+				this.messageStyle.splice(index, 1)
+				setTimeout(() => {
+					this.$el.remove()
+					this.$destroy()
+				}, 400)
 			}
 		}
 	}
