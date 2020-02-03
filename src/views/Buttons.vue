@@ -43,8 +43,8 @@
 		name: "Buttons",
 		components: {Button},
 		methods: {
-			handleClick() {
-				console.log("hi")
+			handleClick(e) {
+				console.log(e)
 			}
 		}
 	}

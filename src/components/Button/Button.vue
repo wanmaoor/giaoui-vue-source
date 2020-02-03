@@ -3,7 +3,7 @@
   <button
     :class="buttonStyle"
     :disabled="isDisabled"
-    @click="$emit('click')"
+    @click="handleClick"
   >
     <slot>{{"无按钮文字"}}</slot>
   </button>
@@ -42,6 +42,9 @@
 				if (this.$attrs.hasOwnProperty(style)) {
 					this.buttonStyle.push(style)
 				}
+			},
+			handleClick(e) {
+				this.$emit("click", e)
 			}
 		}
 	}
