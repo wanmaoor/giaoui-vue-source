@@ -13,7 +13,11 @@
 			},
 			type: {
 				type: String,
-				default: "success"
+				default: "success",
+				validator(value) {
+					const arr = ["success", "info", "warning", "danger"]
+					return arr.includes(value)
+				}
 			}
 		},
 		data() {
