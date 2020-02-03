@@ -8,8 +8,8 @@
 		name: "Message",
 		props: {
 			text: {
-				type: String,
-				default: ""
+				type: [String, Number],
+				default: "",
 			},
 			type: {
 				type: String,
@@ -23,7 +23,7 @@
 		},
 		mounted() {
 			if (this.type) {
-				this.messageStyle.push(this.type)
+				this.messageStyle.push(`giao-${this.type}`)
 			}
 			setTimeout(() => {this.messageStyle.push("show")}, 0)
 			setTimeout(() => {
@@ -56,7 +56,8 @@
     color: #fff;
     border-radius: 4px;
     opacity: 0;
-    transition: all .3s;
+    transition: all .3s ease-in-out;
+    z-index: 999;
   }
 
   .message.show {
@@ -64,19 +65,19 @@
     opacity: 1;
   }
 
-  .message.success {
+  .message.giao-success {
     background-color: #67C23A;
   }
 
-  .message.warning {
+  .message.giao-warning {
     background-color: #E6A23C;
   }
 
-  .message.info {
+  .message.giao-info {
     background-color: #909399;
   }
 
-  .message.danger {
+  .message.giao-danger {
     background-color: #F56C6C;
   }
 </style>
