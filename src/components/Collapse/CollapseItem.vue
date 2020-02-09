@@ -7,25 +7,29 @@
   </div>
 </template>
 
-<script>
-	export default {
-		name: "Collapse-Item",
-		props: ["header", "name"],
-		methods: {
-			handleClick() {
-				for (let child of this.$refs.item.parentElement.children) {
-					child.classList.remove("active")
-				}
-				this.$refs.item.classList.add("active")
-			}
-		},
-		inject: ["active"],
-		mounted() {
-			if (this.name === this.active.toString()) {
-				this.$refs.item.classList.add("active")
-			}
-		}
-	}
+<script lang="ts">
+  import {Component, Inject, Prop, Ref, Vue} from "vue-property-decorator"
+
+  @Component
+  export default class CollapseItem extends Vue {
+    @Prop(String) readonly header: string | undefined | null
+    @Prop(String) readonly name: string | undefined | null
+    @Ref("item") readonly item!: HTMLDivElement
+    @Inject() readonly active!: number
+
+    handleClick() {
+      for (let child of this.item.parentElement!.children) {
+        child.classList.remove("active")
+      }
+      this.item.classList.add("active")
+    }
+
+    mounted() {
+      if (this.name === this.active.toString()) {
+        this.item.classList.add("active")
+      }
+    }
+  }
 </script>
 
 <style scoped>
