@@ -9,17 +9,17 @@
   </button>
 </template>
 
-<script>
-	export default {
-		name: "Button",
-		props: {
-			type: {
-				type: String,
-				default: "default"
-			}
-		},
-		data() {
-			return {
+<script lang="ts">
+  export default {
+    name: "Button",
+    props: {
+      type: {
+        type: String,
+        default: "default"
+      }
+    },
+    data() {
+      return {
 				buttonStyle: ["button"],
 				isDisabled: false
 			}

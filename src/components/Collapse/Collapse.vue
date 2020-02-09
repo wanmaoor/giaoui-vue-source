@@ -4,16 +4,14 @@
   </div>
 </template>
 
-<script>
-	export default {
-		name: "Collapse",
-		props: ["activeItem"],
-		provide() {
-			return {
-				activeItem: this.activeItem,
-			}
-		}
-	}
+<script lang="ts">
+  import {Component, Prop, Provide, Vue} from "vue-property-decorator"
+
+  @Component
+  export default class Collapse extends Vue {
+    @Prop() activeItem!: number
+    @Provide() active = this.activeItem
+  }
 </script>
 
 <style scoped>

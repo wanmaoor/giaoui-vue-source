@@ -19,9 +19,9 @@
 				this.$refs.item.classList.add("active")
 			}
 		},
-		inject: ["activeItem"],
+		inject: ["active"],
 		mounted() {
-			if (this.name === this.activeItem.toString()) {
+			if (this.name === this.active.toString()) {
 				this.$refs.item.classList.add("active")
 			}
 		}
