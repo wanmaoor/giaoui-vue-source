@@ -3,48 +3,34 @@
   <div :class="messageStyle">{{text}}</div>
 </template>
 
-<script>
-	export default {
-		name: "Message",
-		props: {
-			text: {
-				type: [String, Number],
-				default: "",
-			},
-			type: {
-				type: String,
-				default: "success",
-				validator(value) {
-					const arr = ["success", "info", "warning", "danger"]
-					return arr.includes(value)
-				}
-			}
-		},
-		data() {
-			return {
-				messageStyle: ["message"]
-			}
-		},
-		mounted() {
-			if (this.type) {
-				this.messageStyle.push(`giao-${this.type}`)
-			}
-			setTimeout(() => {this.messageStyle.push("show")}, 0)
-			setTimeout(() => {
-				this.close()
-			}, 3000)
-		},
-		methods: {
-			close() {
-				const index = this.messageStyle.findIndex((item) => item === "show")
-				this.messageStyle.splice(index, 1)
-				setTimeout(() => {
-					this.$el.remove()
-					this.$destroy()
-				}, 400)
-			}
-		}
-	}
+<script lang="ts">
+  import {Component, Prop, Vue} from "vue-property-decorator"
+
+  @Component
+  export default class Message extends Vue {
+    @Prop({default: ""}) text!: string
+    @Prop({default: "success"}) type!: "success" | "info" | "warning" | "danger"
+    messageStyle = ["message"]
+
+    mounted() {
+      if (this.type) {
+        this.messageStyle.push(`giao-${this.type}`)
+      }
+      setTimeout(() => {this.messageStyle.push("show")}, 0)
+      setTimeout(() => {
+        this.close()
+      }, 3000)
+    }
+
+    close() {
+      const index = this.messageStyle.findIndex((item) => item === "show")
+      this.messageStyle.splice(index, 1)
+      setTimeout(() => {
+        this.$el.remove()
+        this.$destroy()
+      }, 400)
+    }
+  }
 </script>
 
 <style scoped>
