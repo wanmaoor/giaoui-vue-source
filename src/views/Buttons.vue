@@ -36,18 +36,18 @@
   </div>
 </template>
 
-<script>
-	import Button from "../components/Button/Button"
+<script lang="ts">
+  import Button from "@/components/Button/Button.vue"
+  import {Component, Vue} from "vue-property-decorator"
 
-	export default {
-		name: "Buttons",
-		components: {Button},
-		methods: {
-			handleClick(e) {
-				console.log(e)
-			}
-		}
-	}
+  @Component({
+    components: {Button}
+  })
+  export default class Buttons extends Vue {
+    handleClick(e: MouseEvent) {
+      console.log(e)
+    }
+  }
 </script>
 
 <style scoped>

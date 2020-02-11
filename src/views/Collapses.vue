@@ -29,19 +29,17 @@
 
 </template>
 
-<script>
-	import Collapse from "../components/Collapse/Collapse"
-	import CollapseItem from "../components/Collapse/CollapseItem"
+<script lang="ts">
+  import Collapse from "@/components/Collapse/Collapse.vue"
+  import CollapseItem from "@/components/Collapse/CollapseItem.vue"
+  import {Component, Vue} from "vue-property-decorator"
 
-	export default {
-		name: "Collapses",
-		components: {Collapse, CollapseItem},
-		data() {
-			return {
-				active: 2
-			}
-		}
-	}
+  @Component({
+    components: {Collapse, CollapseItem}
+  })
+  export default class Collapses extends Vue {
+    active: number = 3
+  }
 </script>
 
 <style scoped>
