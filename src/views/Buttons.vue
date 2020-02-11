@@ -25,7 +25,7 @@
       <Button disabled type="danger">危险按钮</Button>
     </div>
     <div class="buttonGroup">
-      <Button :round="true">圆角按钮</Button>
+      <Button round>圆角按钮</Button>
       <Button round type="primary">主要按钮</Button>
       <Button round type="success">成功按钮</Button>
       <Button round type="info">信息按钮</Button>
