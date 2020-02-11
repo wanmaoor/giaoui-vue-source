@@ -1,8 +1,8 @@
 <!--suppress CssUnusedSymbol -->
 <template>
   <button
-    :class="buttonStyle"
-    :disabled="isDisabled"
+    :class="['button',type,{'round': round, 'plain': plain, 'disabled': buttonDisabled}]"
+    :disabled="buttonDisabled"
     @click="handleClick"
   >
     <slot>{{"无按钮文字"}}</slot>
@@ -10,44 +10,24 @@
 </template>
 
 <script lang="ts">
-  export default {
-    name: "Button",
-    props: {
-      type: {
-        type: String,
-        default: "default"
-      }
-    },
-    data() {
-      return {
-				buttonStyle: ["button"],
-				isDisabled: false
-			}
-		},
-		mounted() {
-			this.addButtonFeature("plain")
-			this.addButtonFeature("round")
-			if (this.$attrs.hasOwnProperty("disabled")) {
-				this.buttonStyle.push("disabled")
-				this.isDisabled = true
-			}
-			if (this.type) {
-				this.buttonStyle.push(this.type)
-			} else {
-				console.error("invalid type prop input")
-			}
-		},
-		methods: {
-			addButtonFeature(style) {
-				if (this.$attrs.hasOwnProperty(style)) {
-					this.buttonStyle.push(style)
-				}
-			},
-			handleClick(e) {
-				this.$emit("click", e)
-			}
-		}
-	}
+  import {Component, Prop, Vue} from "vue-property-decorator"
+
+  @Component
+  export default class Button extends Vue {
+    @Prop({default: "default"}) readonly type!: string
+    @Prop(Boolean) readonly round!: boolean
+    @Prop(Boolean) readonly plain!: boolean
+    @Prop(Boolean) readonly disabled!: boolean
+    buttonStyle = ["button"]
+
+    get buttonDisabled() {
+      return this.disabled
+    }
+
+    handleClick(e: MouseEvent) {
+      this.$emit("click", e)
+    }
+  }
 </script>
 
 <style scoped>
