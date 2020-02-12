@@ -32,12 +32,11 @@
       <Button round type="warning">警告按钮</Button>
       <Button round type="danger">危险按钮</Button>
     </div>
-
   </div>
 </template>
 
 <script lang="ts">
-  import Button from "@/components/Button/Button.vue"
+  import Button from "../components/Button/Button.vue"
   import {Component, Vue} from "vue-property-decorator"
 
   @Component({

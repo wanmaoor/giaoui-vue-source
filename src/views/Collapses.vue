@@ -30,8 +30,8 @@
 </template>
 
 <script lang="ts">
-  import Collapse from "@/components/Collapse/Collapse.vue"
-  import CollapseItem from "@/components/Collapse/CollapseItem.vue"
+  import Collapse from "../components/Collapse/Collapse.vue"
+  import CollapseItem from "../components/Collapse/CollapseItem.vue"
   import {Component, Vue} from "vue-property-decorator"
 
   @Component({

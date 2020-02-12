@@ -3,7 +3,49 @@ module.exports = {
 	description: "用Vue造轮子",
 	base: "/giaoui-vue-source/",
 	lastUpdated: "Last Updated",
-	plugins: ["@vuepress/last-updated", "@vuepress/back-to-top", "@vuepress/nprogress"],
+	plugins: ["@vuepress/last-updated", "@vuepress/back-to-top", "@vuepress/nprogress", [
+		"vuepress-plugin-typescript",
+		{
+			"compilerOptions": {
+				"target": "esnext",
+				"module": "esnext",
+				"strict": true,
+				"jsx": "preserve",
+				"importHelpers": true,
+				"moduleResolution": "node",
+				"experimentalDecorators": true,
+				"esModuleInterop": true,
+				"allowSyntheticDefaultImports": true,
+				"sourceMap": true,
+				"baseUrl": ".",
+				"types": [
+					"webpack-env",
+					"jest"
+				],
+				"paths": {
+					"@/*": [
+						"src/*"
+					]
+				},
+				"lib": [
+					"esnext",
+					"dom",
+					"dom.iterable",
+					"scripthost"
+				]
+			},
+			"include": [
+				"src/**/*.ts",
+				"src/**/*.tsx",
+				"src/**/*.vue",
+				"tests/**/*.ts",
+				"tests/**/*.tsx"
+			],
+			"exclude": [
+				"node_modules"
+			]
+		}
+	]],
 	themeConfig: {
 		logo: "/giao.jpg",
 		smoothScroll: true,

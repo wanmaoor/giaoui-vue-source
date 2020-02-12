@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-  import Button from "@/components/Button/Button.vue"
-  import message from "@/message"
+  import Button from "../components/Button/Button.vue"
+  import message from "../message"
   import {Component, Vue} from "vue-property-decorator"
 
   Vue.use(message)
