@@ -38,10 +38,10 @@
       })
     }
 
-    loadLine() {
+    loadLine(index: number) {
       let line = this.$refs.line as HTMLSpanElement
       let headers = this.$refs.header as HTMLSpanElement[]
-      line.style.width = `${headers[0].offsetWidth}px`
+      line.style.width = `${headers[index].offsetWidth}px`
     }
 
     handleTagChange(index: number) {
@@ -49,9 +49,9 @@
       let ele: any = this.$children[index]
       ele.visible = true
       this.activeIndex = index
+      this.loadLine(index)
       let line = this.$refs.line as HTMLSpanElement
       let headers = this.$refs.header as HTMLSpanElement[]
-      line.style.width = `${headers[index].offsetWidth}px`
       line.style.transform = `translateX(${headers[index].offsetLeft}px)`
       this.$emit("tab-change", ele.index)
     }
@@ -59,7 +59,7 @@
     mounted() {
       this.init(this.active)
       setTimeout(() => {
-        this.loadLine()
+        this.loadLine(0)
       }, 0)
     }
   }

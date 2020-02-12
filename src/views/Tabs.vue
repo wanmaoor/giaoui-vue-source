@@ -19,7 +19,7 @@
 		components: {Tab, TabPanel},
 		methods: {
 			onTabChange(index) {
-				console.log("tab 改变了", index)
+				console.log("tab changes: ", index)
 			}
 		}
 	}
