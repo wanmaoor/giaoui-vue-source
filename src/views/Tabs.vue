@@ -1,27 +1,23 @@
 <template>
-  <g-tabs @tab-click="handleClick" v-model="activeName">
-    <g-tab-pane label="用户管理" name="first">xxx</g-tab-pane>
-    <g-tab-pane label="详细列表" name="second">yyy</g-tab-pane>
-    <g-tab-pane label="其他" name="third">zzz</g-tab-pane>
-  </g-tabs>
+  <Tab @tab-change="onTabChange" active="user">
+    <TabPanel index="user" label="xxx">XXX</TabPanel>
+    <TabPanel index="role" label="yyy">YYY</TabPanel>
+    <TabPanel index="config" label="zzz">ZZZ</TabPanel>
+  </Tab>
 </template>
 
 <script>
-	import gTabs from "../components/Tab/g-tabs.vue"
+	import Tab from "../components/Tab/Tab"
+	import TabPanel from "../components/Tab/TabPanel"
 
 	export default {
 		name: "Tabs",
-		components: {GTabPane, gTabs},
-		data() {
-			return {
-				activeName: "first"
-			}
-		},
+		components: {Tab, TabPanel},
 		methods: {
-			handleClick(tab, event) {
-				console.log(tab, event)
+			onTabChange(index) {
+				console.log("tab 改变了", index)
 			}
-		},
+		}
 	}
 </script>
 
