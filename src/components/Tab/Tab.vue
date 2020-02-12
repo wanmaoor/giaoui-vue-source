@@ -5,6 +5,7 @@
         :class="['tab-item', {active: activeIndex === index}]"
         :key="tab"
         @click.stop="handleTagChange(index)"
+        ref="header"
         v-for="(tab, index) in tabs"
         v-html="tab"
       />
@@ -37,16 +38,29 @@
       })
     }
 
+    loadLine() {
+      let line = this.$refs.line as HTMLSpanElement
+      let headers = this.$refs.header as HTMLSpanElement[]
+      line.style.width = `${headers[0].offsetWidth}px`
+    }
+
     handleTagChange(index: number) {
       (this.$children[this.activeIndex] as any).visible = false
       let ele: any = this.$children[index]
       ele.visible = true
       this.activeIndex = index
+      let line = this.$refs.line as HTMLSpanElement
+      let headers = this.$refs.header as HTMLSpanElement[]
+      line.style.width = `${headers[index].offsetWidth}px`
+      line.style.transform = `translateX(${headers[index].offsetLeft}px)`
       this.$emit("tab-change", ele.index)
     }
 
     mounted() {
       this.init(this.active)
+      setTimeout(() => {
+        this.loadLine()
+      }, 0)
     }
   }
 </script>
