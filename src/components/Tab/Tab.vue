@@ -42,6 +42,8 @@
       let line = this.$refs.line as HTMLSpanElement
       let headers = this.$refs.header as HTMLSpanElement[]
       line.style.width = `${headers[index].offsetWidth}px`
+      console.log(headers[index].offsetLeft)
+      line.style.transform = `translateX(${headers[index].offsetLeft}px)`
     }
 
     handleTagChange(index: number) {
@@ -50,9 +52,6 @@
       ele.visible = true
       this.activeIndex = index
       this.loadLine(index)
-      let line = this.$refs.line as HTMLSpanElement
-      let headers = this.$refs.header as HTMLSpanElement[]
-      line.style.transform = `translateX(${headers[index].offsetLeft}px)`
       this.$emit("tab-change", ele.index)
     }
 
