@@ -18,11 +18,13 @@
 </template>
 
 <script lang="ts">
-  import {Component, Prop, Vue} from "vue-property-decorator"
+  import {Component, Prop, Ref, Vue} from "vue-property-decorator"
 
   @Component
   export default class Tab extends Vue {
     @Prop(String) active!: string
+    @Ref() line!: HTMLSpanElement
+    @Ref("header") headers!: HTMLSpanElement[]
     tabs: string[] = []
     activeIndex: number = 0
 
@@ -39,11 +41,8 @@
     }
 
     loadLine(index: number) {
-      let line = this.$refs.line as HTMLSpanElement
-      let headers = this.$refs.header as HTMLSpanElement[]
-      line.style.width = `${headers[index].offsetWidth}px`
-      console.log(headers[index].offsetLeft)
-      line.style.transform = `translateX(${headers[index].offsetLeft}px)`
+      this.line.style.width = `${this.headers[index].offsetWidth}px`
+      this.line.style.transform = `translateX(${this.headers[index].offsetLeft}px)`
     }
 
     handleTagChange(index: number) {
