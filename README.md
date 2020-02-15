@@ -1,17 +1,17 @@
 # Giao UI 
 ![](https://img.shields.io/npm/v/@wanmaoor/giaoui)
 
-## Project setup
+### Project setup
 ```shell script
 yarn install
 ```
 
-## 构建文档
+### 构建文档
 ```shell script
 yarn docs:dev
 ```
 
-## 生成文档
+### 生成文档
 ```shell script
 yarn docs:build
 ```
