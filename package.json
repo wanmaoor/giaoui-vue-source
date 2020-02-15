@@ -1,10 +1,11 @@
 {
-  "name": "giaoui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@wanmaoor/giaoui",
+  "version": "0.0.1",
+  "main": "dist/giaoui.umd.js",
+  "description": "一给我里Giao, Giao~ Yahoo!",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name giaoui src/index.js ",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "d": "bash deploy.sh",
