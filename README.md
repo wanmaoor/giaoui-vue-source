@@ -1,4 +1,5 @@
-# giaoui
+# Giao UI 
+![](https://img.shields.io/npm/v/@wanmaoor/giaoui)
 
 ## Project setup
 ```shell script
