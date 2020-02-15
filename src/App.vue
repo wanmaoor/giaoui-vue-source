@@ -10,6 +10,8 @@
       <router-link to="/buttons">Buttons</router-link>
       |
       <router-link to="/messages">Messages</router-link>
+      |
+      <router-link to="/tooltip">Tooltip</router-link>
     </div>
     <router-view/>
   </div>
