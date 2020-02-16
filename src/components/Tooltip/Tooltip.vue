@@ -21,10 +21,10 @@
   export default class Tooltip extends Vue {
     @Prop({default: "top"}) placement!: "top" | "bottom" | "left" | "right"
     @Prop(String) content!: string
-    isVisible = false
+    isVisible = true
 
     handleToggle() {
-      this.isVisible = !this.isVisible
+      // this.isVisible = !this.isVisible
     }
   }
 </script>
@@ -70,6 +70,14 @@
       top: calc(100% + 10px);
       left: 50%;
       transform: translateX(-50%);
+
+      &::before {
+        border-bottom-color: #303030;
+        transform: translateX(-50%);
+        bottom: 100%;
+        left: 50%
+      }
     }
+
   }
 </style>

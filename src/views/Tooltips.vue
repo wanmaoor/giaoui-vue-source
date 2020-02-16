@@ -10,19 +10,19 @@
       content="提示文字"
       placement="bottom"
     >
-      <Button>上</Button>
+      <Button>下</Button>
     </Tooltip>
     <Tooltip
       content="提示文字"
       placement="left"
     >
-      <Button>上</Button>
+      <Button>左</Button>
     </Tooltip>
     <Tooltip
       content="提示文字"
       placement="right"
     >
-      <Button>上</Button>
+      <Button>右</Button>
     </Tooltip>
   </div>
 </template>
