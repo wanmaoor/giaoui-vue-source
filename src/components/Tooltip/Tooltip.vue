@@ -21,18 +21,28 @@
   export default class Tooltip extends Vue {
     @Prop({default: "top"}) placement!: "top" | "bottom" | "left" | "right"
     @Prop(String) content!: string
-    isVisible = true
+    isVisible = false
 
     handleToggle() {
-      // this.isVisible = !this.isVisible
+      this.isVisible = !this.isVisible
     }
   }
 </script>
 
 <style lang="scss" scoped>
+  $margin: calc(100% + 10px);
+  @mixin horizontal-alignment {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @mixin vertical-aliment {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .giao-container {
     display: inline-block;
-    border: 1px solid #000;
     position: relative;
   }
 
@@ -54,30 +64,47 @@
     }
 
     &.top {
-      bottom: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: $margin;
+      @include horizontal-alignment;
 
       &::before {
         border-top-color: #303030;
-        transform: translateX(-50%);
         top: 100%;
-        left: 50%;
+        @include horizontal-alignment;
       }
     }
 
     &.bottom {
-      top: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
+      top: $margin;
+      @include horizontal-alignment;
 
       &::before {
         border-bottom-color: #303030;
-        transform: translateX(-50%);
         bottom: 100%;
-        left: 50%
+        @include horizontal-alignment
       }
     }
 
+    &.left {
+      right: $margin;
+      @include vertical-aliment;
+
+      &::before {
+        border-left-color: #303030;
+        left: 100%;
+        @include vertical-aliment;
+      }
+    }
+
+    &.right {
+      left: $margin;
+      @include vertical-aliment;
+
+      &::before {
+        right: 100%;
+        border-right-color: #303030;
+        @include vertical-aliment;
+      }
+    }
   }
 </style>
