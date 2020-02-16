@@ -52,7 +52,6 @@
     padding: 12px 20px;
     font-size: 14px;
     border-radius: 4px;
-    margin-left: 10px;
   }
 
   .button:focus, .button:hover {
