@@ -1,16 +1,17 @@
 {
   "name": "@wanmaoor/giaoui",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "dist/giaoui.umd.js",
   "description": "一给我里Giao, Giao~ Yahoo!",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name giaoui src/index.js ",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
     "d": "bash deploy.sh",
+    "p": "bash publish.sh",
     "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs"
+    "docs:dev": "vuepress dev docs",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "core-js": "^3.4.4",
