@@ -48,7 +48,7 @@
 
   .tooltip {
     padding: 5px 10px;
-    background: black;
+    background: #303030;
     color: white;
     position: absolute;
     white-space: nowrap;
