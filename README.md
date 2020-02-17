@@ -1,45 +1,49 @@
-# Giao UI 
-![](https://img.shields.io/npm/v/@wanmaoor/giaoui)
+<h1 align="center">Welcome to Giao UI 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue.svg?cacheSeconds=2592000" />
+  <a href="https://wanmaoor.github.io/giaoui-vue-source/doc/" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/wanmaoor/giaoui-vue-source/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-### Project setup
-```shell script
-yarn install
+> 一给我里Giao, Giao~ Yahoo!
+
+### 🏠 [Homepage](https://wanmaoor.github.io/giaoui-vue-source/)
+
+## Install
+
+```sh
+yarn add @wanmaoor/giaoui
 ```
 
-### 构建文档
-```shell script
-yarn docs:dev
+## Run tests
+
+```sh
+yarn test
 ```
 
-### 生成文档
-```shell script
-yarn docs:build
-```
+## Author
 
-## 生成文档并部署
-```shell script
-yarn d
-```
+👤 **Wan Mao**
 
-### Compiles and hot-reloads for development
-```shell script
-yarn serve
-```
+* Website: https://wanmaoor.github.io/
+* Github: [@wanmaoor](https://github.com/wanmaoor)
 
-### Compiles and minifies for production
-```shell script
-yarn build
-```
+## 🤝 Contributing
 
-### Run your unit tests
-```shell script
-yarn test:unit
-```
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/wanmaoor/giaoui-vue-source/issues). 
 
-### Lints and fixes files
-```shell script
-yarn lint
-```
+## Show your support
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2020 [Wan Mao](https://github.com/wanmaoor).<br />
+This project is [MIT](https://github.com/wanmaoor/giaoui-vue-source/blob/master/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
