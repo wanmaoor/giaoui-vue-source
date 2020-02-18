@@ -32,13 +32,15 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  $line-dd: 1px solid #dddddd;
+  $line-30: 1px solid #303030;
   .item {
-    border-top: 1px solid #dddddd;
-  }
+    border-top: $line-dd;
 
-  .item:last-child {
-    border-bottom: 1px solid #dddddd;
+    &:last-child {
+      border-bottom: $line-dd;
+    }
   }
 
   .item-header {
@@ -48,22 +50,29 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-top: $line-30;
+      border-right: $line-30;
+      margin-left: auto;
+      transform: rotate(45deg);
+      transition: all .4s ease;
+    }
   }
 
-  .item-header::after {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-top: 1px solid #303030;
-    border-right: 1px solid #303030;
-    margin-left: auto;
-    transform: rotate(45deg);
-    transition: all .4s ease;
-  }
+  .item.active {
+    .item-header::after {
+      transform: rotate(135deg);
+    }
 
-  .item.active .item-header::after {
-    transform: rotate(135deg);
+    .item-content {
+      height: auto;
+      padding-bottom: 16px;
+    }
   }
 
   .item-content {
@@ -74,8 +83,4 @@
     transition: all .4s ease-in;
   }
 
-  .item.active .item-content {
-    height: auto;
-    padding-bottom: 16px;
-  }
 </style>
