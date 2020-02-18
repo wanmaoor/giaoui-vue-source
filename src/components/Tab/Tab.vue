@@ -64,9 +64,9 @@
 </script>
 
 <style lang="scss" scoped>
+  $blue: #409eff;
 
-
-  .tabs .tab-header {
+  .tab-header {
     display: flex;
     font-size: 13px;
     color: #303030;
@@ -74,28 +74,30 @@
     font-weight: 500;
     border-bottom: 2px solid #ddd;
     position: relative;
+
+    .line {
+      position: absolute;
+      height: 2px;
+      bottom: 0;
+      background: $blue;
+      transform: translateX(0);
+      transition: all 0.3s;
+      margin-bottom: -2px;
+    }
+
   }
 
-  .tabs .tab-header .line {
-    position: absolute;
-    height: 2px;
-    bottom: 0;
-    background: #409eff;
-    transform: translateX(0);
-    transition: all 0.3s;
-    margin-bottom: -2px;
-  }
-
-  .tabs .tab-item {
+  .tab-item {
     margin-right: 30px;
     cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.active {
+      color: $blue;
+    }
   }
 
-  .tabs .tab-item:hover {
-    color: #409eff;
-  }
-
-  .tabs .tab-item.active {
-    color: #409eff;
-  }
 </style>
