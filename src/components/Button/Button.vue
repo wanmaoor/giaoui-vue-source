@@ -30,7 +30,42 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  $primary: #409eff;
+  $success: #67c23a;
+  $info: #909399;
+  $warning: #e6a23c;
+  $danger: #f56c6c;
+  @mixin primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: #fff;
+  }
+
+  @mixin success {
+    color: #fff;
+    background-color: $success;
+    border-color: $success;
+  }
+
+  @mixin info {
+    color: #fff;
+    background-color: $info;
+    border-color: $info;
+  }
+
+  @mixin warning {
+    color: #fff;
+    background-color: $warning;
+    border-color: $warning;
+  }
+
+  @mixin danger {
+    color: #fff;
+    background-color: $danger;
+    border-color: $danger;
+  }
+
   /* DEFAULT STYLE */
   .button {
     display: inline-block;
@@ -52,77 +87,125 @@
     padding: 12px 20px;
     font-size: 14px;
     border-radius: 4px;
-  }
 
-  .button:focus, .button:hover {
-    color: #409eff;
-    border-color: #c6e2ff;
-    background-color: #ecf5ff;
+    &:focus, &:hover {
+      color: $primary;
+      border-color: #c6e2ff;
+      background-color: #ecf5ff;
+    }
   }
 
   /* PRIMARY STYLE */
   .primary {
-    color: #fff;
-    background-color: #409eff;
-    border-color: #409eff;
-  }
+    @include primary;
 
-  .primary:focus, .primary:hover {
-    background: #66b1ff;
-    border-color: #66b1ff;
-    color: #fff;
+    &:focus, &:hover {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #fff;
+    }
+
+    /*  PLAIN PRIMARY STYLE*/
+    &.plain {
+      color: $primary;
+      background: #ecf5ff;
+      border-color: #b3d8ff;
+    }
+
+    &.plain {
+      &:focus, &:hover {
+        @include primary;
+      }
+    }
   }
 
   /* SUCCESS STYLE */
   .success {
-    color: #fff;
-    background-color: #67c23a;
-    border-color: #67c23a;
-  }
+    @include success;
 
-  .success:focus, .success:hover {
-    background: #85ce61;
-    border-color: #85ce61;
-    color: #fff;
+    &:focus, &:hover {
+      background: #85ce61;
+      border-color: #85ce61;
+      color: #fff;
+    }
+
+    /*  PLAIN SUCCESS STYLE*/
+    &.plain {
+      color: $success;
+      background: #f0f9eb;
+      border-color: #c2e7b0;
+
+      &:focus, &:hover {
+        @include success
+      }
+    }
   }
 
   /*  INFO STYLE */
   .info {
-    color: #fff;
-    background-color: #909399;
-    border-color: #909399;
-  }
+    @include info;
 
-  .info:focus, .info:hover {
-    background: #a6a9ad;
-    border-color: #a6a9ad;
-    color: #fff;
+    &:focus, &:hover {
+      background: #a6a9ad;
+      border-color: #a6a9ad;
+      color: #fff;
+    }
+
+    /*  PLAIN INFO STYLE*/
+    &.plain {
+      color: #909399;
+      background: #f4f4f5;
+      border-color: #d3d4d6;
+
+      &:focus, &:hover {
+        @include info
+      }
+    }
   }
 
   /*  WARNING STYLE*/
   .warning {
-    color: #fff;
-    background-color: #e6a23c;
-    border-color: #e6a23c;
-  }
+    @include warning;
 
-  .warning:focus, .warning:hover {
-    background: #ebb563;
-    border-color: #ebb563;
-    color: #fff;
+    &:focus, &:hover {
+      background: #ebb563;
+      border-color: #ebb563;
+      color: #fff;
+    }
+
+    /*  PLAIN WARNING STYLE*/
+    &.plain {
+      color: #e6a23c;
+      background: #fdf6ec;
+      border-color: #f5dab1;
+
+      &:focus, &:hover {
+        @include warning;
+      }
+    }
   }
 
   /*  DANGER STYLE*/
   .danger {
-    color: #fff;
-    background-color: #f56c6c;
-    border-color: #f56c6c;
-  }
+    @include danger;
 
-  .danger:focus, .danger:hover {
-    background: #f78989;
-    border-color: #f78989;
-    color: #fff;
+    &:focus, &:hover {
+      background: #f78989;
+      border-color: #f78989;
+      color: #fff;
+    }
+
+    /*  PLAIN DANGER STYLE*/
+    &.plain {
+      color: #f56c6c;
+      background: #fef0f0;
+      border-color: #fbc4c4;
+
+      &:focus, &:hover {
+        @include danger
+      }
+    }
+
   }
 
   /*  PLAIN STYLE*/
@@ -132,71 +215,6 @@
     color: #409eff;
   }
 
-  /*  PLAIN PRIMARY STYLE*/
-  .primary.plain {
-    color: #409eff;
-    background: #ecf5ff;
-    border-color: #b3d8ff;
-  }
-
-  .primary.plain:focus, .primary.plain:hover {
-    background: #409eff;
-    border-color: #409eff;
-    color: #fff;
-  }
-
-  /*  PLAIN SUCCESS STYLE*/
-  .success.plain {
-    color: #67c23a;
-    background: #f0f9eb;
-    border-color: #c2e7b0;
-  }
-
-  .success.plain:focus, .success.plain:hover {
-    background: #67c23a;
-    border-color: #67c23a;
-    color: #fff;
-  }
-
-  /*  PLAIN INFO STYLE*/
-  .info.plain {
-    color: #909399;
-    background: #f4f4f5;
-    border-color: #d3d4d6;
-  }
-
-  .info.plain:focus, .info.plain:hover {
-    background: #909399;
-    border-color: #909399;
-    color: #fff;
-  }
-
-  /*  PLAIN WARNING STYLE*/
-  .warning.plain {
-    color: #e6a23c;
-    background: #fdf6ec;
-    border-color: #f5dab1;
-  }
-
-  .warning.plain:focus, .warning.plain:hover {
-    background: #e6a23c;
-    border-color: #e6a23c;
-    color: #fff;
-  }
-
-  /*  PLAIN DANGER STYLE*/
-  .danger.plain {
-    color: #f56c6c;
-    background: #fef0f0;
-    border-color: #fbc4c4;
-  }
-
-  .danger.plain:focus, .danger.plain:hover {
-    background: #f56c6c;
-    border-color: #f56c6c;
-    color: #fff;
-  }
-
   /*  ROUND */
   .round {
     border-radius: 20px;
@@ -204,11 +222,13 @@
   }
 
   /*  DISABLE BUTTON*/
-  .button.disabled, .button.disabled:focus, .button.disabled:hover {
-    color: #c0c4cc;
-    cursor: not-allowed;
-    background-image: none;
-    background-color: #fff;
-    border-color: #ebeef5;
+  .button.disabled {
+    &, &:focus, &:hover {
+      color: #c0c4cc;
+      cursor: not-allowed;
+      background-image: none;
+      background-color: #fff;
+      border-color: #ebeef5;
+    }
   }
 </style>
