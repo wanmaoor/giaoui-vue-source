@@ -33,7 +33,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .message {
     position: fixed;
     left: 50%;
@@ -48,26 +48,26 @@
     opacity: 0;
     transition: all .3s ease-in-out;
     z-index: 999;
-  }
 
-  .message.show {
-    transform: translate(-50%, 10px);
-    opacity: 1;
-  }
+    &.show {
+      transform: translate(-50%, 10px);
+      opacity: 1;
+    }
 
-  .message.giao-success {
-    background-color: #67C23A;
-  }
+    &.giao-success {
+      background-color: #67C23A;
+    }
 
-  .message.giao-warning {
-    background-color: #E6A23C;
-  }
+    &.giao-warning {
+      background-color: #E6A23C;
+    }
 
-  .message.giao-info {
-    background-color: #909399;
-  }
+    &.giao-info {
+      background-color: #909399;
+    }
 
-  .message.giao-danger {
-    background-color: #F56C6C;
+    &.giao-danger {
+      background-color: #F56C6C;
+    }
   }
 </style>
