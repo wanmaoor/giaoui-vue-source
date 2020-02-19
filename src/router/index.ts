@@ -34,6 +34,11 @@ const routes = [
     path: "/tooltip",
     name: "tooltip",
     component: () => import("../views/Tooltips.vue")
+  },
+  {
+    path: "/dialog",
+    name: "dialog",
+    component: () => import("../views/Dialogs.vue")
   }
 ]
 

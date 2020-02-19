@@ -12,6 +12,8 @@
       <router-link to="/messages">Messages</router-link>
       |
       <router-link to="/tooltip">Tooltip</router-link>
+      |
+      <router-link to="/dialog">Dialog</router-link>
     </div>
     <router-view/>
   </div>
