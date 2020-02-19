@@ -61,7 +61,8 @@ module.exports = {
           "/component/2.md",
           "/component/3.md",
           "/component/4.md",
-          "/component/5.md"
+          "/component/5.md",
+          "/component/6.md",
         ]
       }
     ]

@@ -20,7 +20,7 @@
 
 <script lang="ts">
   import {Component, Prop, Vue} from "vue-property-decorator"
-  import Button from "@/components/Button/Button.vue"
+  import Button from "../Button/Button.vue"
 
   @Component({
     components: {Button}
