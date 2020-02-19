@@ -1,7 +1,9 @@
 <template>
   <div>
     <Button type="primary">打开Dialog</Button>
-    <Dialog/>
+    <Dialog>
+      <span>这是一段信息</span>
+    </Dialog>
   </div>
 </template>
 
