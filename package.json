@@ -1,6 +1,6 @@
 {
   "name": "@wanmaoor/giaoui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/giaoui.umd.js",
   "description": "一给我里Giao, Giao~ Yahoo!",
   "scripts": {
