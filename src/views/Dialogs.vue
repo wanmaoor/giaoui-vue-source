@@ -1,7 +1,9 @@
 <template>
   <div>
-    <Button type="primary">打开Dialog</Button>
-    <Dialog>
+    <Button @click="visible = !visible" type="primary">打开Dialog</Button>
+    <Dialog
+      :is-visible.sync="visible"
+    >
       <span>这是一段信息</span>
     </Dialog>
   </div>
@@ -13,7 +15,12 @@
 
 	export default {
 		name: "Dialogs",
-		components: {Dialog, Button}
+		components: {Dialog, Button},
+		data() {
+			return {
+				visible: false
+			}
+		}
 	}
 </script>
 
