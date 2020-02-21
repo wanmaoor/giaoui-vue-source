@@ -6,6 +6,7 @@
     >
       <span
         :class="['tab-item', {active: activeIndex === index}]"
+        :style="{width:spanWidth}"
         :key="tab"
         @click.stop="handleTagChange(index)"
         ref="header"
@@ -34,6 +35,7 @@
     @Ref("content") content!: HTMLDivElement
     tabs: string[] = []
     activeIndex: number = 0
+    childrenLength: number | undefined
 
     init(activeName: string) {
       this.$children.forEach((ele: any, index: number) => {
@@ -64,6 +66,10 @@
       this.updateVal(ele.value)
     }
 
+    get spanWidth() {
+      return `${(1 / (this.childrenLength as number)) * 100}%`
+    }
+
     mounted() {
       this.init(this.active)
       if (!this.noBar) {
@@ -74,8 +80,8 @@
       if (this.onlyHeader) {
         this.content.remove()
       }
+      this.childrenLength = this.$children.length
     }
-
     @Emit("update:value")
     updateVal(val: string | number) {
       return val
@@ -88,10 +94,15 @@
 
   .tab-header {
     display: flex;
+    align-items: center;
     font-size: 13px;
     color: #303030;
     font-weight: 500;
     position: relative;
+
+    span {
+      text-align: center;
+    }
 
     .line {
       position: absolute;
@@ -106,7 +117,6 @@
   }
 
   .tab-item {
-    margin-right: 30px;
     cursor: pointer;
 
     &:hover {
