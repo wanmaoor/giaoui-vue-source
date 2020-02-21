@@ -6,8 +6,8 @@
     >
       <span
         :class="['tab-item', {active: activeIndex === index}]"
-        :style="{width:spanWidth}"
         :key="tab"
+        :style="{width:spanWidth}"
         @click.stop="handleTagChange(index)"
         ref="header"
         v-for="(tab, index) in tabs"
@@ -36,6 +36,10 @@
     tabs: string[] = []
     activeIndex: number = 0
     childrenLength: number | undefined
+
+    get spanWidth() {
+      return `${(1 / (this.childrenLength as number)) * 100}%`
+    }
 
     init(activeName: string) {
       this.$children.forEach((ele: any, index: number) => {
@@ -66,10 +70,6 @@
       this.updateVal(ele.value)
     }
 
-    get spanWidth() {
-      return `${(1 / (this.childrenLength as number)) * 100}%`
-    }
-
     mounted() {
       this.init(this.active)
       if (!this.noBar) {
@@ -82,6 +82,7 @@
       }
       this.childrenLength = this.$children.length
     }
+
     @Emit("update:value")
     updateVal(val: string | number) {
       return val
