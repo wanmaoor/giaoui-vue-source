@@ -3,6 +3,9 @@
   "version": "0.0.13",
   "main": "dist/giaoui.umd.js",
   "description": "一给我里Giao, Giao~ Yahoo!",
+  "author": "Oliver Wan",
+  "license": "MIT",
+  "homepage": "https://github.com/wanmaoor/giaoui-vue-source/blob/master/README.md",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name giaoui src/index.js ",
