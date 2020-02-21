@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-  import {Component, Prop, Ref, Vue} from "vue-property-decorator"
+  import {Component, Emit, Prop, Ref, Vue} from "vue-property-decorator"
 
   @Component
   export default class Tab extends Vue {
@@ -60,7 +60,8 @@
       if (!this.noBar) {
         this.loadLine(index)
       }
-      this.$emit("tab-change", ele.index)
+      this.$emit("tab-change", ele.value)
+      this.updateVal(ele.value)
     }
 
     mounted() {
@@ -73,6 +74,11 @@
       if (this.onlyHeader) {
         this.content.remove()
       }
+    }
+
+    @Emit("update:value")
+    updateVal(val: string | number) {
+      return val
     }
   }
 </script>

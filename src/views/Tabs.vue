@@ -1,22 +1,26 @@
 <template>
   <div>
     <div class="container">
-      <Tab @tab-change="onTabChange" active="user">
-        <TabPanel index="user" label="this is a long tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
+      <Tab :active="user" :value.sync="user" @tab-change="onTabChange">
+        <TabPanel label="this is a long tab" value="user">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
           ratione?
         </TabPanel>
-        <TabPanel index="role" label="short tab">Lorem ipsum dolor sit amet.</TabPanel>
-        <TabPanel index="config" label="this is a huge long long tab ">Lorem ipsum dolor sit amet, consectetur
+        <TabPanel label="short tab" value="role">Lorem ipsum dolor sit amet.</TabPanel>
+        <TabPanel label="this is a huge long long tab " value="config">Lorem ipsum dolor sit amet, consectetur
           adipisicing
-          elit. Adipisci aliquam, doloribus eius esse et excepturi fugiat porro quisquam voluptas voluptates.
         </TabPanel>
       </Tab>
-
     </div>
     <div class="container">
-      <Tab :height="4" active="1" noBar onlyHeader>
-        <TabPanel index="1" label="111"/>
-        <TabPanel index="2" label="2"/>
+      <Tab
+        :active="type"
+        :height="4"
+        :value.sync="type"
+        noBar
+        onlyHeader
+      >
+        <TabPanel label="支出" value="-"/>
+        <TabPanel label="收入" value="+"/>
       </Tab>
     </div>
   </div>
@@ -33,6 +37,15 @@
 			onTabChange(index) {
 				console.log("tab changes: ", index)
 			}
+		},
+		data() {
+			return {
+				type: "-",
+				user: "user"
+			}
+		},
+		updated() {
+			console.log(this.type)
 		}
 	}
 </script>

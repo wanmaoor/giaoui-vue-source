@@ -11,7 +11,7 @@
   export default class TabPanel extends Vue {
     visible = false
     @Prop({required: true}) readonly label!: string
-    @Prop(String) readonly index!: string
+    @Prop(String) readonly value!: string
   }
 </script>
 
