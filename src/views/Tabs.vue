@@ -1,14 +1,24 @@
 <template>
-  <div class="container">
-    <Tab @tab-change="onTabChange" active="user">
-      <TabPanel index="user" label="this is a long tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-        ratione?
-      </TabPanel>
-      <TabPanel index="role" label="short tab">Lorem ipsum dolor sit amet.</TabPanel>
-      <TabPanel index="config" label="this is a huge long long tab ">Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Adipisci aliquam, doloribus eius esse et excepturi fugiat porro quisquam voluptas voluptates.
-      </TabPanel>
-    </Tab>
+  <div>
+    <div class="container">
+      <Tab @tab-change="onTabChange" active="user">
+        <TabPanel index="user" label="this is a long tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
+          ratione?
+        </TabPanel>
+        <TabPanel index="role" label="short tab">Lorem ipsum dolor sit amet.</TabPanel>
+        <TabPanel index="config" label="this is a huge long long tab ">Lorem ipsum dolor sit amet, consectetur
+          adipisicing
+          elit. Adipisci aliquam, doloribus eius esse et excepturi fugiat porro quisquam voluptas voluptates.
+        </TabPanel>
+      </Tab>
+
+    </div>
+    <div class="container">
+      <Tab :height="4" active="1" noBar onlyHeader>
+        <TabPanel index="1" label="111"/>
+        <TabPanel index="2" label="2"/>
+      </Tab>
+    </div>
   </div>
 </template>
 

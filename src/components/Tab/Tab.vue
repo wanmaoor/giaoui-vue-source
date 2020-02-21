@@ -1,6 +1,9 @@
 <template>
   <div class="tabs">
-    <div class="tab-header">
+    <div
+      :style="{borderBottom: noBar ? 'none' : '2px solid #ddd', lineHeight: height}"
+      class="tab-header"
+    >
       <span
         :class="['tab-item', {active: activeIndex === index}]"
         :key="tab"
@@ -9,9 +12,9 @@
         v-for="(tab, index) in tabs"
         v-html="tab"
       />
-      <span class="line" ref="line"></span>
+      <span class="line" ref="line" v-if="!noBar"></span>
     </div>
-    <div class="tab-content">
+    <div class="tab-content" ref="content">
       <slot></slot>
     </div>
   </div>
@@ -23,8 +26,12 @@
   @Component
   export default class Tab extends Vue {
     @Prop(String) active!: string
+    @Prop(Boolean) noBar!: boolean
+    @Prop({type: Number, default: 2}) height!: number
+    @Prop(Boolean) onlyHeader!: boolean
     @Ref() line!: HTMLSpanElement
     @Ref("header") headers!: HTMLSpanElement[]
+    @Ref("content") content!: HTMLDivElement
     tabs: string[] = []
     activeIndex: number = 0
 
@@ -50,15 +57,22 @@
       let ele: any = this.$children[index]
       ele.visible = true
       this.activeIndex = index
-      this.loadLine(index)
+      if (!this.noBar) {
+        this.loadLine(index)
+      }
       this.$emit("tab-change", ele.index)
     }
 
     mounted() {
       this.init(this.active)
-      setTimeout(() => {
-        this.loadLine(0)
-      }, 0)
+      if (!this.noBar) {
+        setTimeout(() => {
+          this.loadLine(0)
+        }, 0)
+      }
+      if (this.onlyHeader) {
+        this.content.remove()
+      }
     }
   }
 </script>
@@ -70,9 +84,7 @@
     display: flex;
     font-size: 13px;
     color: #303030;
-    line-height: 2;
     font-weight: 500;
-    border-bottom: 2px solid #ddd;
     position: relative;
 
     .line {
