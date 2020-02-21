@@ -56,7 +56,7 @@
     height: 10vh;
     margin: 30px auto;
     border-radius: 4px;
-    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
     padding: 15px;
   }
 </style>

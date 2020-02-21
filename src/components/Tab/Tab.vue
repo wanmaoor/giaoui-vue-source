@@ -44,7 +44,7 @@
     init(activeName: string) {
       this.$children.forEach((ele: any, index: number) => {
         this.tabs.push(ele.label)
-        if (activeName === ele.index) {
+        if (activeName === ele.value) {
           ele.visible = true
           this.activeIndex = index
         } else {
