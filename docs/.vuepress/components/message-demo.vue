@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
     <Messages/>
-  </div>
 </template>
 
 <script>
@@ -14,7 +12,5 @@
 </script>
 
 <style scoped>
-  .container {
-    padding: 10px 16px;
-  }
+
 </style>

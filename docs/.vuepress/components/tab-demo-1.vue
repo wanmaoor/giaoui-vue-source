@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Tab :active="user" :height="3" :value.sync="user" @tab-change="onTabChange">
+    <Tab :active="user" :height="3" :value.sync="user" @tab-change="onTabChange" no-bar>
       <TabPanel label="this is a long tab" value="user">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
         ratione?
       </TabPanel>
@@ -17,7 +17,7 @@
 	import TabPanel from "../../../src/components/Tab/TabPanel"
 
 	export default {
-		name: "tab-demo",
+		name: "tab-demo-1",
 		components: {Tab, TabPanel},
 		data() {
 			return {
