@@ -1,7 +1,13 @@
 <template>
   <div class="container">
-    <Carousel type="zoom">
+    <Carousel height="300px" type="zoom">
       <CarouselItem :key="index" v-for="(item, index) in 4">{{item}}</CarouselItem>
+    </Carousel>
+    <Carousel type="slide">
+      <CarouselItem :key="index" v-for="(item, index) in 5">{{item}}</CarouselItem>
+    </Carousel>
+    <Carousel type="fade">
+      <CarouselItem :key="index" v-for="(item, index) in 3">{{item}}</CarouselItem>
     </Carousel>
   </div>
 </template>
@@ -12,7 +18,13 @@
 
 	export default {
 		name: "Carousels",
-		components: {CarouselItem, Carousel}
+		components: {CarouselItem, Carousel},
+		mounted() {
+			const container = document.querySelector(".container")
+			for (let i = 0; i < container.children.length; i++) {
+				container.children[i].style.marginTop = "10px"
+			}
+		}
 	}
 </script>
 

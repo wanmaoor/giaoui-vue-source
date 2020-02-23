@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div :style="{height: height}" class="carousel">
     <div class="panels" ref="panels">
       <slot></slot>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-  import {Component, Ref, Vue, Prop} from "vue-property-decorator"
+  import {Component, Prop, Ref, Vue} from "vue-property-decorator"
   import PageAnimation from "@/animation"
 
   @Component
@@ -23,6 +23,7 @@
     @Ref() readonly panels!: HTMLDivElement
     @Ref() readonly indicators!: HTMLDivElement
     @Prop(String) readonly type!: string
+    @Prop(String) readonly height!: string
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
@@ -92,8 +93,8 @@
 
   .carousel {
     position: relative;
-    height: 200px;
     overflow: hidden;
+    height: 200px;
 
     .panels > a {
       position: absolute;
