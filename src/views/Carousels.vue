@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <Carousel height="300px" trigger="click" type="zoom">
+    <Carousel :autoplay="false" height="300px" trigger="click" type="zoom">
       <CarouselItem :key="index" v-for="(item, index) in 4">{{item}}</CarouselItem>
     </Carousel>
-    <Carousel type="slide">
+    <Carousel :interval="1000" type="fade">
       <CarouselItem :key="index" v-for="(item, index) in 5">{{item}}</CarouselItem>
     </Carousel>
     <Carousel>

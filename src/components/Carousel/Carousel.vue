@@ -25,6 +25,8 @@
     @Prop({default: "slide", type: String}) readonly type!: string
     @Prop({default: "200px", type: String}) readonly height?: string
     @Prop({default: "mouseenter", type: String}) readonly trigger!: string
+    @Prop({default: true, type: Boolean}) readonly autoplay!: boolean
+    @Prop({default: 3000, type: Number}) readonly interval!: number
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
@@ -33,6 +35,11 @@
         this.indicators.children[0].classList.add("active")
         this.bindIndicators()
       })
+      if (this.autoplay) {
+        setInterval(() => {
+          this.shiftPage(this.getNextIndex)
+        }, this.interval)
+      }
     }
 
     shiftPage(fn: Function) {
