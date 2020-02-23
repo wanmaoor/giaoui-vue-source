@@ -4,8 +4,8 @@
       <slot></slot>
     </div>
     <div class="arrows">
-      <button @click="prevPage" class="arrow arrow-prev"></button>
-      <button @click="nextPage" class="arrow arrow-next"></button>
+      <button @click="shiftPage(getPrevIndex)" class="arrow arrow-prev"></button>
+      <button @click="shiftPage(getNextIndex)" class="arrow arrow-next"></button>
     </div>
     <div class="indicators" ref="indicators">
       <span :key="index" v-for="(indicator, index) in indicatorCounts"></span>
@@ -31,9 +31,12 @@
       })
     }
 
-    prevPage() {}
-
-    nextPage() {}
+    shiftPage(fn: Function) {
+      let fromIndex = this.getIndex()
+      let toIndex = fn()
+      this.setPage(fromIndex, toIndex)
+      this.setIndicator(toIndex)
+    }
 
     bindIndicators() {
       for (const indicator of this.indicators.children) {
@@ -61,6 +64,14 @@
 
     getIndex() {
       return [...this.indicators.children].indexOf((this.indicators.querySelector(".active")) as HTMLElement)
+    }
+
+    getPrevIndex() {
+      return (this.getIndex() - 1 + this.indicators.children.length) % this.indicators.children.length
+    }
+
+    getNextIndex() {
+      return (this.getIndex() + 1) % this.indicators.children.length
     }
   }
 </script>
