@@ -39,6 +39,11 @@ const routes = [
     path: "/dialog",
     name: "dialog",
     component: () => import("../views/Dialogs.vue")
+  },
+  {
+    path: "/carousel",
+    name: "carousel",
+    component: () => import("../views/Carousels.vue")
   }
 ]
 

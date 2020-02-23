@@ -14,6 +14,8 @@
       <router-link to="/tooltip">Tooltip</router-link>
       |
       <router-link to="/dialog">Dialog</router-link>
+      |
+      <router-link to="/carousel">Carousel</router-link>
     </div>
     <router-view/>
   </div>
