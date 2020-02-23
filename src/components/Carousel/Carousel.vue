@@ -1,5 +1,6 @@
 <template>
-  <div :style="{height: height}" class="carousel">
+  <div :style="{height: height}" @mouseenter.stop="handleMouseEnter" @mouseleave.stop="handleMouseLeave"
+       class="carousel">
     <div class="panels" ref="panels">
       <slot></slot>
     </div>
@@ -20,6 +21,7 @@
   @Component
   export default class Carousel extends Vue {
     indicatorCounts = 0
+    intervalId: number | undefined | null
     @Ref() readonly panels!: HTMLDivElement
     @Ref() readonly indicators!: HTMLDivElement
     @Prop({default: "slide", type: String}) readonly type!: string
@@ -35,11 +37,7 @@
         this.indicators.children[0].classList.add("active")
         this.bindIndicators()
       })
-      if (this.autoplay) {
-        setInterval(() => {
-          this.shiftPage(this.getNextIndex)
-        }, this.interval)
-      }
+      this.startTimer()
     }
 
     shiftPage(fn: Function) {
@@ -52,7 +50,6 @@
     bindIndicators() {
       for (const indicator of this.indicators.children) {
         indicator.addEventListener(this.trigger, (e) => {
-          console.log(e)
           const fromIndex = this.getIndex()
           const toIndex = [...this.indicators.children].indexOf((e.target) as HTMLSpanElement)
           this.setIndicator(toIndex)
@@ -70,8 +67,7 @@
 
     setPage(fromIndex: number, toIndex: number) {
       const direction = fromIndex > toIndex ? "right" : "left"
-      const animation = PageAnimation[this.type]
-      animation(this.panels.children[fromIndex], this.panels.children[toIndex], direction)
+      PageAnimation[this.type](this.panels.children[fromIndex], this.panels.children[toIndex], direction)
     }
 
     getIndex() {
@@ -84,6 +80,28 @@
 
     getNextIndex() {
       return (this.getIndex() + 1) % this.indicators.children.length
+    }
+
+    pauseTimer() {
+      if (this.intervalId) {
+        clearInterval(this.intervalId)
+        this.intervalId = null
+      }
+    }
+
+    startTimer() {
+      if (this.interval <= 0 || !this.autoplay || this.intervalId) return
+      this.intervalId = setInterval(() => {
+        this.shiftPage(this.getNextIndex)
+      }, this.interval)
+    }
+
+    handleMouseEnter() {
+      this.pauseTimer()
+    }
+
+    handleMouseLeave() {
+      this.startTimer()
     }
   }
 </script>
