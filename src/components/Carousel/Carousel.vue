@@ -37,9 +37,10 @@
 
     bindIndicators() {
       for (const indicator of this.indicators.children) {
-        indicator.addEventListener("click", () => {
+        indicator.addEventListener("click", (e) => {
           const fromIndex = this.getIndex()
-          console.log(fromIndex)
+          const toIndex = [...this.indicators.children].indexOf((e.target) as HTMLSpanElement)
+          console.log(fromIndex, toIndex)
         })
       }
     }
