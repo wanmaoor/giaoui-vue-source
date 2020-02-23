@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>选项卡 - Tabs | Giao UI</title>
+    <meta name="description" content="用Vue造轮子">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/giaoui-vue-source/assets/css/0.styles.1d4db9e1.css" as="style"><link rel="preload" href="/giaoui-vue-source/assets/js/app.e1de9454.js" as="script"><link rel="preload" href="/giaoui-vue-source/assets/js/5.979adb7b.js" as="script"><link rel="preload" href="/giaoui-vue-source/assets/js/23.176397c4.js" as="script"><link rel="prefetch" href="/giaoui-vue-source/assets/js/1.ea064cec.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/10.0393a69a.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/11.5f7ade2c.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/12.47e754d4.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/13.c617a87e.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/14.1c65cac5.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/15.e7fe5fe2.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/16.bf3edb4a.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/17.14bd7f99.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/18.6e72cd26.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/19.29144f47.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/2.38b67f59.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/20.f59ff0e1.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/21.e914ec66.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/22.3d1648b1.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/24.abefe84c.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/25.5f2b62bd.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/26.0a51bce2.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/27.70fc965b.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/28.12eeb140.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/29.49791c26.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/3.8c418e6c.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/30.f3dfadb7.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/6.0fb181a4.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/7.b10cb7d5.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/8.33456819.js"><link rel="prefetch" href="/giaoui-vue-source/assets/js/9.5351b308.js">
+    <link rel="stylesheet" href="/giaoui-vue-source/assets/css/0.styles.1d4db9e1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/giaoui-vue-source/" class="home-link router-link-active"><img src="/giaoui-vue-source/giao.jpg" alt="Giao UI" class="logo"> <span class="site-name can-hide">Giao UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/giaoui-vue-source/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/giaoui-vue-source/doc/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="https://github.com/wanmaoor" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/giaoui-vue-source/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/giaoui-vue-source/doc/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="https://github.com/wanmaoor" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>开始上手</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/giaoui-vue-source/doc/" class="sidebar-link">安装 - Installation</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/giaoui-vue-source/component/1.html" class="sidebar-link">按钮 - Button</a></li><li><a href="/giaoui-vue-source/component/2.html" class="active sidebar-link">选项卡 - Tabs</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/giaoui-vue-source/component/2.html#示例" class="sidebar-link">示例</a></li><li class="sidebar-sub-header"><a href="/giaoui-vue-source/component/2.html#api" class="sidebar-link">API</a></li></ul></li><li><a href="/giaoui-vue-source/component/3.html" class="sidebar-link">手风琴 - Collapse</a></li><li><a href="/giaoui-vue-source/component/4.html" class="sidebar-link">消息提示 - Message</a></li><li><a href="/giaoui-vue-source/component/5.html" class="sidebar-link">提示框 - Tooltip</a></li><li><a href="/giaoui-vue-source/component/6.html" class="sidebar-link">对话框 - Dialog</a></li><li><a href="/giaoui-vue-source/component/7.html" class="sidebar-link">走马灯 - Carousel</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="选项卡-tabs"><a href="#选项卡-tabs" class="header-anchor">#</a> 选项卡 - Tabs</h1> <h2 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h2> <h3 id="默认样式"><a href="#默认样式" class="header-anchor">#</a> 默认样式</h3> <!----> <details class="custom-block details"><summary>点击查看源码</summary> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span> <span class="token attr-name">:active</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:value.sync</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@tab-change</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onTabChange<span class="token punctuation">&quot;</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>this is a long tab<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ratione?
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>short tab<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>role<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span>
+      <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>this is a huge long long tab <span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>config<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetur adipisicing
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Tab TabPanel<span class="token punctuation">}</span><span class="token keyword">from</span> <span class="token string">&quot;@wanmaoor/giaoui&quot;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;tab-demo&quot;</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      user<span class="token operator">:</span> <span class="token string">'user'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onTabChange</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 10vh<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 30px auto<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 4px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h3 id="没有状态条"><a href="#没有状态条" class="header-anchor">#</a> 没有状态条</h3> <!----> <details class="custom-block details"><summary>点击查看源码</summary> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span>
+      <span class="token attr-name">:active</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:value.sync</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@tab-change</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onTabChange<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">no-bar</span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>this is a long tab<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ratione?
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>short tab<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>role<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span>
+      <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>this is a huge long long tab <span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>config<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetur adipisicing
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Tab TabPanel<span class="token punctuation">}</span><span class="token keyword">from</span> <span class="token string">&quot;@wanmaoor/giaoui&quot;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;tab-demo-1&quot;</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      user<span class="token operator">:</span> <span class="token string">'user'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onTabChange</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 10vh<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 30px auto<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 4px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h3 id="不展示-tab-内容"><a href="#不展示-tab-内容" class="header-anchor">#</a> 不展示 Tab 内容</h3> <!----> <details class="custom-block details"><summary>点击查看源码</summary> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span>
+      <span class="token attr-name">:active</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:value.sync</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@tab-change</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onTabChange<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">only-header</span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>this is a long tab<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ratione?
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>short tab<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>role<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span>
+      <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TabPanel</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>this is a huge long long tab <span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>config<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetur adipisicing
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TabPanel</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Tab TabPanel<span class="token punctuation">}</span><span class="token keyword">from</span> <span class="token string">&quot;@wanmaoor/giaoui&quot;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;tab-demo-2&quot;</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span> Tab<span class="token punctuation">,</span> TabPanel <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      user<span class="token operator">:</span> <span class="token string">&quot;user&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onTabChange</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 30px auto<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 4px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h2 id="api"><a href="#api" class="header-anchor">#</a> API</h2> <h3 id="tab组件"><a href="#tab组件" class="header-anchor">#</a> <code>Tab</code>组件</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>接受类型</th></tr></thead> <tbody><tr><td><code>@tab-change</code></td> <td>接受一个回调函数, 在 tab 切换时调用, 第一个参数为 tab 的索引值</td> <td>function(e: string</td></tr> <tr><td><code>active</code></td> <td>选定默认激活的 tab</td> <td>string</td></tr> <tr><td><code>height</code></td> <td>定义 Tab Header 的高度, 使用 line-height 属性定义</td> <td>number</td></tr> <tr><td><code>noBar</code> or <code>no-bar</code></td> <td>不显示状态条</td> <td></td></tr> <tr><td><code>onlyHeader</code> or <code>only-header</code></td> <td>不显示 Tab Content</td> <td></td></tr></tbody></table> <h3 id="tabpanel组件"><a href="#tabpanel组件" class="header-anchor">#</a> <code>TabPanel</code>组件</h3> <table><thead><tr><th><code>index</code></th> <th>tab 的名字, 和<code>Tab</code>组件的<code>active</code>属性对应</th></tr></thead> <tbody><tr><td><code>label</code></td> <td>确定 tab header 所展示的文字</td></tr></tbody></table></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2/22/2020, 12:10:31 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/giaoui-vue-source/component/1.html" class="prev">
+        按钮 - Button
+      </a></span> <span class="next"><a href="/giaoui-vue-source/component/3.html">
+        手风琴 - Collapse
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/giaoui-vue-source/assets/js/app.e1de9454.js" defer></script><script src="/giaoui-vue-source/assets/js/5.979adb7b.js" defer></script><script src="/giaoui-vue-source/assets/js/23.176397c4.js" defer></script>
+  </body>
+</html>
