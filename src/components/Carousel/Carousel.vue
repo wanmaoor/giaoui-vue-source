@@ -16,7 +16,7 @@
 
 <script lang="ts">
   import {Component, Prop, Ref, Vue} from "vue-property-decorator"
-  import PageAnimation from "@/animation"
+  import PageAnimation from "../../animation"
 
   @Component
   export default class Carousel extends Vue {

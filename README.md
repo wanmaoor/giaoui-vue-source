@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Giao UI 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.13-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.14-blue.svg?cacheSeconds=2592000" />
   <a href="https://wanmaoor.github.io/giaoui-vue-source/doc/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
