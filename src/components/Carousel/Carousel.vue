@@ -1,27 +1,30 @@
 <template>
   <div class="carousel">
-    <div class="panels">
+    <div class="panels" ref="panels">
       <slot></slot>
     </div>
     <div class="arrows">
       <button class="arrow arrow-prev"></button>
       <button class="arrow arrow-next"></button>
     </div>
-    <div class="indicators">
-      <span :key="index" v-for="(indicator, index) in indicatorCounts">1</span>
+    <div class="indicators" ref="indicators">
+      <span :key="index" v-for="(indicator, index) in indicatorCounts"></span>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from "vue-property-decorator"
+  import {Component, Vue, Ref} from "vue-property-decorator"
 
   @Component
   export default class Carousel extends Vue {
     indicatorCounts = 0
+    @Ref() readonly panels!: HTMLDivElement
+    @Ref() readonly indicators!: HTMLDivElement
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
+
     }
   }
 </script>
@@ -112,6 +115,37 @@
 
     &:hover .arrow-next {
       @include hoverButton
+    }
+
+    .indicators {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      z-index: 20;
+
+      span {
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 2px;
+          background: #c0c4cc;
+          border-radius: 2px;
+          transition: all .3s;
+        }
+
+        &.active::before {
+          background: #ffffff;
+        }
+      }
     }
   }
 </style>
