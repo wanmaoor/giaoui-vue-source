@@ -40,6 +40,10 @@
       this.startTimer()
     }
 
+    beforeDestroy() {
+      this.pauseTimer()
+    }
+
     shiftPage(fn: Function) {
       let fromIndex = this.getIndex()
       let toIndex = fn()
