@@ -40,9 +40,23 @@
         indicator.addEventListener("click", (e) => {
           const fromIndex = this.getIndex()
           const toIndex = [...this.indicators.children].indexOf((e.target) as HTMLSpanElement)
-          console.log(fromIndex, toIndex)
+          this.setIndicator(toIndex)
+          this.setPage(fromIndex, toIndex)
         })
       }
+    }
+
+    setIndicator(toIndex: number) {
+      [...this.indicators.children].forEach(indicator => {
+        indicator.classList.remove("active")
+      })
+      this.indicators.children[toIndex].classList.add("active")
+    }
+
+    setPage(fromIndex: number, toIndex: number) {
+      const direction = fromIndex > toIndex ? "right" : "left"
+      console.log(direction)
+      // this.animation(this.panels.children[fromIndex], this.panels.children[toIndex], direction)
     }
 
     getIndex() {
