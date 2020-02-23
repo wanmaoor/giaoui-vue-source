@@ -22,8 +22,9 @@
     indicatorCounts = 0
     @Ref() readonly panels!: HTMLDivElement
     @Ref() readonly indicators!: HTMLDivElement
-    @Prop(String) readonly type!: string
-    @Prop(String) readonly height!: string
+    @Prop({default: "slide", type: String}) readonly type!: string
+    @Prop({default: "200px", type: String}) readonly height?: string
+    @Prop({default: "mouseenter", type: String}) readonly trigger!: string
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
@@ -43,7 +44,8 @@
 
     bindIndicators() {
       for (const indicator of this.indicators.children) {
-        indicator.addEventListener("click", (e) => {
+        indicator.addEventListener(this.trigger, (e) => {
+          console.log(e)
           const fromIndex = this.getIndex()
           const toIndex = [...this.indicators.children].indexOf((e.target) as HTMLSpanElement)
           this.setIndicator(toIndex)
@@ -94,7 +96,6 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    height: 200px;
 
     .panels > a {
       position: absolute;
@@ -186,7 +187,7 @@
           content: '';
           display: block;
           width: 40px;
-          height: 2px;
+          height: 4px;
           background: #c0c4cc;
           border-radius: 2px;
           transition: all .3s;

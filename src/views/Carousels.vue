@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <Carousel height="300px" type="zoom">
+    <Carousel height="300px" trigger="click" type="zoom">
       <CarouselItem :key="index" v-for="(item, index) in 4">{{item}}</CarouselItem>
     </Carousel>
     <Carousel type="slide">
       <CarouselItem :key="index" v-for="(item, index) in 5">{{item}}</CarouselItem>
     </Carousel>
-    <Carousel type="fade">
-      <CarouselItem :key="index" v-for="(item, index) in 3">{{item}}</CarouselItem>
+    <Carousel>
+      <CarouselItem :key="index" v-for="(item, index) in 6">{{item}}</CarouselItem>
     </Carousel>
   </div>
 </template>
