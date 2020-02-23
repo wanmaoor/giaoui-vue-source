@@ -24,7 +24,10 @@
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
-
+      this.panels.children[0].classList.add("active")
+      this.$nextTick(() => {
+        this.indicators.children[0].classList.add("active")
+      })
     }
   }
 </script>
