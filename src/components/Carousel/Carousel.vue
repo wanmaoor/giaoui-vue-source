@@ -4,8 +4,8 @@
       <slot></slot>
     </div>
     <div class="arrows">
-      <button class="arrow arrow-prev"></button>
-      <button class="arrow arrow-next"></button>
+      <button @click="prevPage" class="arrow arrow-prev"></button>
+      <button @click="nextPage" class="arrow arrow-next"></button>
     </div>
     <div class="indicators" ref="indicators">
       <span :key="index" v-for="(indicator, index) in indicatorCounts"></span>
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue, Ref} from "vue-property-decorator"
+  import {Component, Ref, Vue} from "vue-property-decorator"
 
   @Component
   export default class Carousel extends Vue {
@@ -27,7 +27,25 @@
       this.panels.children[0].classList.add("active")
       this.$nextTick(() => {
         this.indicators.children[0].classList.add("active")
+        this.bindIndicators()
       })
+    }
+
+    prevPage() {}
+
+    nextPage() {}
+
+    bindIndicators() {
+      for (const indicator of this.indicators.children) {
+        indicator.addEventListener("click", () => {
+          const fromIndex = this.getIndex()
+          console.log(fromIndex)
+        })
+      }
+    }
+
+    getIndex() {
+      return [...this.indicators.children].indexOf((this.indicators.querySelector(".active")) as HTMLElement)
     }
   }
 </script>
