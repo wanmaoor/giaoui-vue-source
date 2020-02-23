@@ -1,5 +1,7 @@
 <template>
-  <div>carousel item</div>
+  <a href="#">
+    <slot></slot>
+  </a>
 </template>
 
 <script>
