@@ -14,13 +14,15 @@
 </template>
 
 <script lang="ts">
-  import {Component, Ref, Vue} from "vue-property-decorator"
+  import {Component, Ref, Vue, Prop} from "vue-property-decorator"
+  import PageAnimation from "@/animation"
 
   @Component
   export default class Carousel extends Vue {
     indicatorCounts = 0
     @Ref() readonly panels!: HTMLDivElement
     @Ref() readonly indicators!: HTMLDivElement
+    @Prop(String) readonly type!: string
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
@@ -58,8 +60,8 @@
 
     setPage(fromIndex: number, toIndex: number) {
       const direction = fromIndex > toIndex ? "right" : "left"
-      console.log(direction)
-      // this.animation(this.panels.children[fromIndex], this.panels.children[toIndex], direction)
+      const animation = PageAnimation[this.type]
+      animation(this.panels.children[fromIndex], this.panels.children[toIndex], direction)
     }
 
     getIndex() {

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Carousel>
+    <Carousel type="zoom">
       <CarouselItem :key="index" v-for="(item, index) in 4">{{item}}</CarouselItem>
     </Carousel>
   </div>

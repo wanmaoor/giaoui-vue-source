@@ -1,7 +1,7 @@
 const css = ($node: HTMLElement, cssObj: object) => Object.assign($node.style, cssObj)
 
 interface IAnimation {
-  slide: ($from: any, $to: any, direction: string) => void
+  [key: string]: ($from: any, $to: any, direction: string) => void
   fade: ($from: any, $to: any) => void
   zoom: ($from: any, $to: any) => void
 }
