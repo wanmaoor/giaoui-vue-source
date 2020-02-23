@@ -1,6 +1,6 @@
 {
   "name": "@wanmaoor/giaoui",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "main": "dist/giaoui.umd.js",
   "description": "一给我里Giao, Giao~ Yahoo!",
   "author": "Oliver Wan",
