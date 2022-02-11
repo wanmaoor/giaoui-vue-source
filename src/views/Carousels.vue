@@ -9,6 +9,9 @@
     <Carousel>
       <CarouselItem :key="index" v-for="(item, index) in 6">{{item}}</CarouselItem>
     </Carousel>
+    <Carousel :showIndicator="false" :showArrows="false">
+      <CarouselItem :key="index" v-for="(item, index) in 6">{{item}}</CarouselItem>
+    </Carousel>
   </div>
 </template>
 

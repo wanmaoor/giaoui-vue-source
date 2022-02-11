@@ -4,11 +4,11 @@
     <div class="panels" ref="panels">
       <slot></slot>
     </div>
-    <div class="arrows">
+    <div class="arrows" v-show="showArrows">
       <button @click="shiftPage(getPrevIndex)" class="arrow arrow-prev"></button>
       <button @click="shiftPage(getNextIndex)" class="arrow arrow-next"></button>
     </div>
-    <div class="indicators" ref="indicators">
+    <div class="indicators" ref="indicators" v-show="showIndicator">
       <span :key="index" v-for="(indicator, index) in indicatorCounts"></span>
     </div>
   </div>
@@ -29,6 +29,8 @@
     @Prop({default: "mouseenter", type: String}) readonly trigger!: string
     @Prop({default: true, type: Boolean}) readonly autoplay!: boolean
     @Prop({default: 3000, type: Number}) readonly interval!: number
+    @Prop({default: true, type: Boolean}) readonly showIndicator!: boolean
+    @Prop({default: true, type: Boolean}) readonly showArrows!: boolean
 
     mounted() {
       this.indicatorCounts = this.$slots.default!.length
